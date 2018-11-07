@@ -1,0 +1,10 @@
+#!/bin/bash
+
+sudo -i
+siemens
+cd /home/service/Schreibtisch/Testprogramme
+su monitoring
+lq
+GET services
+Columns: host_name description state
+
