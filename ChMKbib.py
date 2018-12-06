@@ -38,9 +38,9 @@ def start_Connection():
 def show_Hosts(socket_path):
     try:
         print ("\nHosts:")
-        hosts = livestatus.SingleSiteConnection(socket_path).query_table("GET hosts\nColumns: name alias address")
-        for name, alias, address in hosts:
-            print ("%-16s %-16s %s" % (name, address, alias))
+        hosts = livestatus.SingleSiteConnection(socket_path).query_table("GET hosts\nColumns: name alias address state")
+        for name, alias, address, state in hosts:
+            print ("%-16s %-16s %-15s %15s" % (name, address, alias, state))
     except Exception as e:
         print ("Livestatus error %s" % str(e))
 

@@ -1,0 +1,4 @@
+host,localhost(127.0.0.1),0
+host,WindowsHost(192.168.56.1),0
+host,LinuxClient(10.0.2.15),1
+
